@@ -21,16 +21,22 @@ class LoopyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //
+    // Uninitialized framework shall not return any recording URLs and not return nil
+    //
+    func testUninitializedRecordings() {
+        
+        let recs = Recordings.read()
+        XCTAssertNotNil(recs)
+        XCTAssertTrue(recs.count == 0)
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
+//
 }

@@ -9,5 +9,12 @@
 import Foundation
 
 open class Recordings: NSObject {
-
+    
+    //
+    // return a list of (file-)URLs of any present recordings
+    //
+    open static func read() -> [URL]
+    {
+        return [URL]()
+    }
 }
