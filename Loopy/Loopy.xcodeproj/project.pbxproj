@@ -24,6 +24,7 @@
 		76F8AC5C20AC53540038B8EC /* Loopy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F8AC5220AC53540038B8EC /* Loopy.framework */; };
 		76F8AC6120AC53540038B8EC /* LoopyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8AC6020AC53540038B8EC /* LoopyTests.swift */; };
 		76F8AC6320AC53540038B8EC /* Loopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 76F8AC5520AC53540038B8EC /* Loopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76F8AC7320AC55990038B8EC /* Recordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8AC7220AC55990038B8EC /* Recordings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		76F8AC5B20AC53540038B8EC /* LoopyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoopyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F8AC6020AC53540038B8EC /* LoopyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopyTests.swift; sourceTree = "<group>"; };
 		76F8AC6220AC53540038B8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F8AC7220AC55990038B8EC /* Recordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		76F8AC5420AC53540038B8EC /* Loopy */ = {
 			isa = PBXGroup;
 			children = (
+				76F8AC7120AC555F0038B8EC /* Storage */,
 				76F8AC5520AC53540038B8EC /* Loopy.h */,
 				76F8AC5620AC53540038B8EC /* Info.plist */,
 			);
@@ -98,6 +101,14 @@
 				76F8AC6220AC53540038B8EC /* Info.plist */,
 			);
 			path = LoopyTests;
+			sourceTree = "<group>";
+		};
+		76F8AC7120AC555F0038B8EC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				76F8AC7220AC55990038B8EC /* Recordings.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 				TargetAttributes = {
 					76F8AC5120AC53540038B8EC = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					76F8AC5A20AC53540038B8EC = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -228,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F8AC7320AC55990038B8EC /* Recordings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +386,7 @@
 		76F8AC6720AC53540038B8EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = media.skubo.Loopy;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,6 +412,7 @@
 		76F8AC6820AC53540038B8EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -421,6 +437,7 @@
 		76F8AC6A20AC53540038B8EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoopyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,6 +455,7 @@
 		76F8AC6B20AC53540038B8EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoopyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

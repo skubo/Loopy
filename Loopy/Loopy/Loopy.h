@@ -2,7 +2,7 @@
 //  Loopy.h
 //  Loopy
 //
-//  Created by txitax on 16.05.18.
+//  Created by skubo on 16.05.18.
 //  Copyright © 2018 Christian Garbers. All rights reserved.
 //
 
