@@ -43,6 +43,25 @@ open class Control: NSObject {
     //
     open func bootstrap(options: ControlOptions) -> ControlStatus
     {
-        return ControlStatus.error
+        errors.removeAll()
+        status = ControlStatus.bootstrapping
+        
+        // check given URL
+        if options.baseURL != nil
+        {
+            var urlString = options.baseURL!.absoluteString
+            if !urlString.hasSuffix("/")
+            {
+                urlString.append("/")
+            }
+            let writable = FileManager.default.isWritableFile(atPath: urlString)
+            if !writable
+            {
+                status = ControlStatus.error
+                errors.append(ControlErrors.baseURLInaccessible)
+                return status
+            }
+        }
+        return ControlStatus.online
     }
 }

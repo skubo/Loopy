@@ -50,7 +50,25 @@ class LoopyTests: XCTestCase {
         XCTAssertTrue(control.errors.count == 1)
         XCTAssertTrue(control.errors.contains(ControlErrors.baseURLInaccessible))
     }
+
+    // TODO: find a working writable directory for unit tests (this seems to be a problem)
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
     
+    func testValidURL()
+    {
+        let options = ControlOptions()
+        options.baseURL = getDocumentsDirectory()
+        let control = Control()
+        let status = control.bootstrap(options: options)
+        XCTAssertTrue(status == ControlStatus.online)
+        XCTAssertTrue(control.status == ControlStatus.online)
+        XCTAssertTrue(control.errors.count == 0)
+    }
+
 
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
