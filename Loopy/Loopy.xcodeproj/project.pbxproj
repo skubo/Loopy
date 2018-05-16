@@ -26,6 +26,7 @@
 		76F8AC6320AC53540038B8EC /* Loopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 76F8AC5520AC53540038B8EC /* Loopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76F8AC7320AC55990038B8EC /* Recordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8AC7220AC55990038B8EC /* Recordings.swift */; };
 		76F8AC7620AC56BD0038B8EC /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8AC7520AC56BD0038B8EC /* Messages.swift */; };
+		76F8AC7920AC5A9D0038B8EC /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8AC7820AC5A9D0038B8EC /* Control.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		76F8AC6220AC53540038B8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F8AC7220AC55990038B8EC /* Recordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordings.swift; sourceTree = "<group>"; };
 		76F8AC7520AC56BD0038B8EC /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		76F8AC7820AC5A9D0038B8EC /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		76F8AC5420AC53540038B8EC /* Loopy */ = {
 			isa = PBXGroup;
 			children = (
+				76F8AC7720AC5A840038B8EC /* Control */,
 				76F8AC7420AC569A0038B8EC /* Notifications */,
 				76F8AC7120AC555F0038B8EC /* Storage */,
 				76F8AC5520AC53540038B8EC /* Loopy.h */,
@@ -120,6 +123,14 @@
 				76F8AC7520AC56BD0038B8EC /* Messages.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		76F8AC7720AC5A840038B8EC /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				76F8AC7820AC5A9D0038B8EC /* Control.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 			files = (
 				76F8AC7320AC55990038B8EC /* Recordings.swift in Sources */,
 				76F8AC7620AC56BD0038B8EC /* Messages.swift in Sources */,
+				76F8AC7920AC5A9D0038B8EC /* Control.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
